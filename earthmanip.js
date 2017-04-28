@@ -2,7 +2,8 @@
   var width = window.innerWidth < window.innerHeight ? window.innerWidth/3 : window.innerHeight/2,
   height = width,
   sens = 0.25,
-  focused;
+  focused,
+  rotateToCountry;
 
   //Setting projection
 
@@ -129,7 +130,7 @@
         if(cnt[i].id == sel.value) {return cnt[i];}
       }
     };
-    function rotateToCountry(count){
+    rotateToCountry = function(count){
   var rotate = projection.rotate(),
       focusedCountry = function(cnt, sel){
         for(var i = 0, l = cnt.length; i < l; i++) {
