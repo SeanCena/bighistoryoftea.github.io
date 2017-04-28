@@ -129,10 +129,7 @@
         if(cnt[i].id == sel.value) {return cnt[i];}
       }
     };
-
-  };
-
-function rotateToCountry(count){
+    function rotateToCountry(count){
   var rotate = projection.rotate(),
       focusedCountry = function(cnt, sel){
         for(var i = 0, l = cnt.length; i < l; i++) {
@@ -143,3 +140,6 @@ function rotateToCountry(count){
   svg.selectAll(".focused").classed("focused", focused = false);
   transition();
 };
+
+  };
+
